@@ -1,0 +1,164 @@
+.sf-button,
+.sf-icon-button {
+  font-family: var(--site-font-sans);
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, opacity 0.15s ease;
+}
+
+.sf-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 0.45rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.sf-button-small {
+  min-height: 1.9rem;
+  padding: 0.45rem 0.75rem;
+  font-size: 0.82rem;
+}
+
+.sf-button-brand-tertiary {
+  background: #111827;
+  color: #fff;
+}
+
+.sf-button-brand-tertiary:hover:not(:disabled) {
+  background: #1f2937;
+}
+
+.sf-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.sf-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: #4b5563;
+}
+
+.sf-icon-button-small {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.sf-icon-button svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sf-icon-button:hover {
+  border-color: rgb(0 0 0 / 10%);
+  background: rgb(0 0 0 / 5%);
+  color: #111827;
+}
+
+.sf-icon-button-dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.7;
+}
+
+.sf-textarea {
+  display: flex;
+  width: 100%;
+  flex: none;
+}
+
+.sf-textarea-input {
+  min-height: 5rem;
+  width: 100%;
+  resize: vertical;
+  border: 1px solid rgb(0 0 0 / 12%);
+  border-radius: 0.6rem;
+  background: #f9fafb;
+  padding: 0.75rem;
+  color: #111827;
+  font: inherit;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.sf-textarea-input:focus {
+  border-color: #111827;
+  background: #fff;
+}
+
+.sf-dropdown-menu {
+  min-width: 10rem;
+  border: 1px solid rgb(0 0 0 / 12%);
+  border-radius: 0.55rem;
+  background: #fff;
+  padding: 0.35rem;
+  color: #111827;
+  box-shadow: 0 18px 50px rgb(0 0 0 / 20%);
+}
+
+.sf-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  border-radius: 0.4rem;
+  padding: 0.45rem 0.55rem;
+  font-size: 0.85rem;
+}
+
+.sf-dropdown-item:hover {
+  background: rgb(0 0 0 / 5%);
+}
+
+.sf-dropdown-icon,
+.sf-dropdown-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.dark .sf-button-brand-tertiary {
+  background: #f5f5f5;
+  color: #111827;
+}
+
+.dark .sf-button-brand-tertiary:hover:not(:disabled) {
+  background: #e5e7eb;
+}
+
+.dark .sf-icon-button {
+  color: #a1a1aa;
+}
+
+.dark .sf-icon-button:hover {
+  border-color: #3f3f46;
+  background: rgb(255 255 255 / 7%);
+  color: #fff;
+}
+
+.dark .sf-textarea-input {
+  border-color: #2e2e2e;
+  background: #151515;
+  color: #f5f5f5;
+}
+
+.dark .sf-textarea-input:focus {
+  border-color: #71717a;
+  background: #111;
+}
+
+.dark .sf-dropdown-menu {
+  border-color: #2e2e2e;
+  background: #151515;
+  color: #f5f5f5;
+}
+
+.dark .sf-dropdown-item:hover {
+  background: rgb(255 255 255 / 7%);
+}

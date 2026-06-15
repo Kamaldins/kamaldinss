@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "npx pagefind --site public",
+    "postbuild": "pagefind --site .next/server/app --output-path public/_pagefind",
     "start": "next start"
   },
   "keywords": [],
@@ -14,6 +14,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@subframe/core": "^1.155.0",
     "next": "^16.2.9",
     "nextra": "^4.6.1",
     "nextra-theme-docs": "^4.6.1",

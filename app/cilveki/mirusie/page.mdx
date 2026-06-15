@@ -6,12 +6,18 @@ cascade:
   weight: 0
 ---
 
+import CardGrid from '../../../components/CardGrid.jsx'
+
 # Mūžībā aizgājušie
 
-Mūžībā aizgājušie Kamaldiņu dzimtas locekļi.
+Mūžībā aizgājušie Kamaldiņu dzimtas locekļi. Pilns saraksts ir pieejams šīs sadaļas navigācijā.
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <a href="*" className="p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-    <h3 className="font-semibold mb-2">Link</h3>
-  </a>
-</div>
+<CardGrid>
+  <CardGrid.Card title="Vīrieši" href="/cilveki/viriesi" icon="users">
+    Dzimtas vīriešu profili
+  </CardGrid.Card>
+
+  <CardGrid.Card title="Sievietes" href="/cilveki/sievietes" icon="users">
+    Dzimtas sieviešu profili
+  </CardGrid.Card>
+</CardGrid>

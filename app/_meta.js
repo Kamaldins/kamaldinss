@@ -1,38 +1,50 @@
 export default {
   index: {
-    title: 'Sākums',
-    type: 'page'
+    title: "Sākums",
+    type: "page",
   },
   cilveki: {
-    title: 'Cilvēki',
-    type: 'page'
+    title: "Cilvēki",
+    type: "page",
   },
   vesture: {
-    title: 'Vēsture',
-    type: 'page'
+    title: "Vēsture",
+    type: "page",
   },
   vieta: {
-    title: 'Vieta',
-    type: 'page'
+    title: "Vieta",
+    type: "page",
   },
   arhivs: {
-    title: 'Arhīvs',
-    type: 'page'
+    title: "Arhīvs",
+    type: "page",
   },
-  'par-mums': {
-    title: 'Par Mums',
-    type: 'page'
-  },
-  legal: {
-    title: 'Tiesiskais Pamatojums',
-    type: 'page'
-  },
-  privacy: {
-    title: 'Privātuma Politika',
-    type: 'page'
+  "par-mums": {
+    title: "Par mums",
+    type: "page",
   },
   kontakti: {
-    title: 'Kontakti',
-    type: 'page'
-  }
-}
+    title: "Kontakti",
+    type: "page",
+  },
+  juridiskais: {
+    title: "Tiesiskais pamatojums",
+    display: "hidden",
+  },
+  privatums: {
+    title: "Privātums",
+    display: "hidden",
+  },
+  iestatijumi: {
+    title: "Iestatījumi",
+    display: "hidden",
+  },
+  legal: {
+    title: "Tiesiskais pamatojums",
+    display: "hidden",
+  },
+  privacy: {
+    title: "Privātums",
+    display: "hidden",
+  },
+};

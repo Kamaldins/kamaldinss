@@ -1,37 +1,53 @@
 import { Footer, Layout, Navbar } from "nextra-theme-docs";
-import { Head } from "nextra/components";
+import { Head, Search } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
+import Chatbot from "../components/chat/Chatbot.jsx";
+import TranslateButton from "../components/TranslateButton.jsx";
 import "nextra-theme-docs/style.css";
 import "../global.css";
 
-const navbar = <Navbar logo={<b>Kamaldiņu Dzimta</b>} />;
+const navbar = (
+  <Navbar
+    logo={<b>Kamaldiņu Dzimta</b>}
+    logoLink="/"
+    projectLink="https://github.com/Kamaldins"
+  >
+    <TranslateButton />
+  </Navbar>
+);
 
 const footer = (
   <Footer>
-    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-      <span>Kamaldiņu Dzimta</span>
-      <span className="flex flex-wrap gap-2 text-sm">
-        <a
-          href="https://kamaltek.com"
-          target="_blank"
-          rel="noreferrer"
-          className="hover:underline"
-        >
-          Kamaltek
+    <div className="site-footer">
+      <div>
+        <strong>Kamaldiņu Dzimta</strong>
+        <p>Digitāls dzimtas vēstures, dokumentu un atmiņu arhīvs.</p>
+      </div>
+      <nav aria-label="Kājenes saites">
+        <a href="/par-mums">Par projektu</a>
+        <a href="/kontakti">Kontakti</a>
+        <a href="/juridiskais">Tiesiskais pamatojums</a>
+        <a href="/privatums">Privātums</a>
+        <a href="https://github.com/Kamaldins" target="_blank" rel="noreferrer">
+          GitHub
         </a>
-        <a href="/legal" className="hover:underline">
-          Legal
-        </a>
-        <a href="/privacy" className="hover:underline">
-          Privacy
-        </a>
-      </span>
+      </nav>
     </div>
   </Footer>
 );
 
+const search = (
+  <Search
+    placeholder="Meklēt arhīvā…"
+    emptyResult="Nekas netika atrasts."
+    errorText="Meklēšanas indekss vēl nav izveidots. Palaidiet npm run build un pēc tam npm run dev."
+    loading="Meklē…"
+  />
+);
+
 export default async function RootLayout({ children }) {
   const pageMap = await getPageMap();
+
   return (
     <html lang="lv" suppressHydrationWarning dir="ltr">
       <Head />
@@ -40,10 +56,22 @@ export default async function RootLayout({ children }) {
           navbar={navbar}
           footer={footer}
           pageMap={pageMap}
-          docsRepositoryBase="https://github.com/shuding/nextra"
+          search={search}
+          docsRepositoryBase="https://github.com/Kamaldins"
+          editLink={null}
+          feedback={{ content: null }}
+          copyPageButton={false}
+          sidebar={{
+            autoCollapse: true,
+            defaultMenuCollapseLevel: 1,
+            defaultOpen: false,
+          }}
+          themeSwitch={{ dark: "Tumšs", light: "Gaišs", system: "Sistēma" }}
+          toc={{ backToTop: "Atpakaļ augšā", title: "Šajā lapā" }}
         >
           {children}
         </Layout>
+        <Chatbot />
       </body>
     </html>
   );

@@ -7,24 +7,30 @@ sidebar:
   open: true
 ---
 
-# Dzimtas Sievietes
+import CardGrid from '../../../components/CardGrid.jsx'
+
+# Dzimtas sievietes
 
 Kamaldiņu dzimtas mātes, meitas un glabātājas.
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-  <a href="luba-kamaldina" className="p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-    <h3 className="font-semibold mb-2">Ļuba Kamaldiņa</h3>
-  </a>
-  <a href="nina-kamaldina" className="p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-    <h3 className="font-semibold mb-2">Ņina Kamaldiņa</h3>
-  </a>
-  <a href="alide-kamaldina" className="p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-    <h3 className="font-semibold mb-2">Alīde Kamaldiņa</h3>
-  </a>
-  <a href="lolita-kamaldina" className="p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-    <h3 className="font-semibold mb-2">Lolita Kamaldiņa</h3>
-  </a>
-  <a href="inese-kamaldina" className="p-4 border rounded-lg hover:bg-gray-50 dark:hover:bg-gray-900 transition">
-    <h3 className="font-semibold mb-2">Inese Kamaldiņa</h3>
-  </a>
-</div>
+<CardGrid>
+  <CardGrid.Card title="Ļubova Kamaldiņa" href="/cilveki/sievietes/lubova-kamaldina" icon="users">
+    Dzimtas profils
+  </CardGrid.Card>
+
+  <CardGrid.Card title="Ņina Kamaldiņa" href="/cilveki/sievietes/nina-kamaldina" icon="users">
+    Žurnāliste un dzimtas locekle
+  </CardGrid.Card>
+
+  <CardGrid.Card title="Alīde Kamaldiņa" href="/cilveki/sievietes/alide-kamaldina" icon="users">
+    Dzimtas profils
+  </CardGrid.Card>
+
+  <CardGrid.Card title="Lolita Kamaldiņa" href="/cilveki/sievietes/lolita-kamaldina" icon="users">
+    Jelgavas atzars
+  </CardGrid.Card>
+
+  <CardGrid.Card title="Inese Kamaldiņa" href="/cilveki/sievietes/inese-kamaldina" icon="users">
+    Dzimtas profils
+  </CardGrid.Card>
+</CardGrid>
