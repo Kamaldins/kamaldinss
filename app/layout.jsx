@@ -3,6 +3,7 @@ import { Head, Search } from "nextra/components";
 import { getPageMap } from "nextra/page-map";
 import Chatbot from "../components/chat/Chatbot.jsx";
 import TranslateButton from "../components/TranslateButton.jsx";
+import { Analytics } from "@vercel/analytics/next";
 import "nextra-theme-docs/style.css";
 import "../global.css";
 
@@ -72,6 +73,7 @@ export default async function RootLayout({ children }) {
           {children}
         </Layout>
         <Chatbot />
+        <Analytics />
       </body>
     </html>
   );
